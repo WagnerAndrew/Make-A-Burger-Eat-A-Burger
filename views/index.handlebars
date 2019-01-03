@@ -1,9 +1,8 @@
-
 <div class="wrapper">
 
 <div><h1>Eat the burger!</h1></div>
 
-<div class="left">
+<aside class="left burgerCol">
 
   <h2>Burgers ready to eat:</h2>
   
@@ -15,7 +14,21 @@
       {{/each}}
     </ul>
 
-</div>
+</aside>
+
+<aside class="right burgerCol">
+
+  <h2>Burgers you ate:</h2>
+
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block devoured=false}}
+        {{/if}}
+      {{/each}}
+    </ul>
+
+</aside>
 
 <div class="center">
 
@@ -39,19 +52,7 @@
 
 </div>
 
-<div class="right">
 
-  <h2>Burgers you ate:</h2>
-
-    <ul>
-      {{#each burgers}}
-        {{#if devoured}}
-          {{> burgers/burger-block devoured=false}}
-        {{/if}}
-      {{/each}}
-    </ul>
-
-</div>
 
 
 {{!-- Wrapper End  --}}

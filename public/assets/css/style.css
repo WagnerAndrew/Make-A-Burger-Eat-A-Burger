@@ -1,9 +1,38 @@
 body {background-color: pink};
 
+.wrapper {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  background: blue;
+  order: 1;
+  flex-flow: row wrap;
+
+} 
+.right {
+  display: flex;
+  justify-content: flex-end;
+  background: green;
+  order: 2;
+  flex-flow: row wrap;
+
+} 
+
+.burgerCol { 
+  flex: 1 auto; 
+}
+
+ul {
+  list-style-type: none;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
 }
 
 .label {
