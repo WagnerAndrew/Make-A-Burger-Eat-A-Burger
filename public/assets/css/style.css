@@ -1,29 +1,40 @@
-body {background-color: pink};
+body {
+  font-family: Helvitca, sans-serif;
+  background-color: pink};
 
 .wrapper {
   display: flex;
-  flex-wrap: row wrap;
+  flex-wrap: wrap;
 }
+
+.burgerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+aside { flex: 1 auto; }
 
 .left {
   display: flex;
   justify-content: flex-start;
-  background: blue;
-  order: 1;
-  flex-flow: row wrap;
-
+  background: yellow;
+  margin: 0;
+  flex-direction: column;
 } 
+
 .right {
   display: flex;
-  justify-content: flex-end;
+  align-items: start;
+  background: orange;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
   background: green;
-  order: 2;
-  flex-flow: row wrap;
-
-} 
-
-.burgerCol { 
-  flex: 1 auto; 
+  flex-direction: column;
+  justify-content: center;
 }
 
 ul {
@@ -39,12 +50,13 @@ li {
   font-weight: bold;
 }
 
-.create-update-form {
+.create-form {
   padding: 5px;
   margin: 5px;
   background: aqua;
 }
 
 .form-group {
-  margin-bottom: 5px;
+  padding: 5px;
+  margin: 5px;
 }
